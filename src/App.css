@@ -1,38 +1,65 @@
-.App {
+header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.practice {
+  /* grow to take up the entire height of the page */
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.practice-layout {
+  /* set up columns with proportional widths */
   display: flex;
-  flex-direction: column;
+}
+
+.practice-side-panel {
+  height: 100%;
+
+  /* column width */
+  flex: 15;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.practice-side-panel:hover {
+  background: #d3d3d3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.practice-center-panel {
+  height: 100%;
+
+  /* column width */
+  flex: 70;
+
+  /* to center the brackets */
+  display: flex;
+  align-items: center; /* vertical align */
+  justify-content: center; /* horizontal align*/
+}
+
+/* used this for debugging */
+/* .practice-center-panel:hover {
+  background: #d3d3d3;
+} */
+
+.card {
+  /* to center the card within the layout */
+  margin: auto;
+
+  /* card sizing (to be fixed) */
+  width: 40%;
+  height: 45%;
+
+  /* to center the content (currently just text) within the card */
+  display: flex;
+  align-items: center; /* vertical align */
+  justify-content: center; /* horizontal align*/
+}
+
+.card-text {
+  font-size: x-large;
 }

@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
+import { Flashcard, Deck } from './types';
+// import Header from './components/Header';
+// import Card from './components/Card';
+import Practice from './components/Practice';
+
 function App() {
+  const [deck, setDeck] = useState<Deck>({
+    name: "sample deck",
+    cards: [  {front: "front-0", back: "back-0"},
+              {front: "front-1", back: "back-1"},
+              {front: "front-2", back: "back-2"} ]
+    })
+
+  // const [flashcard, setFlashcard] = useState<Flashcard>(
+  //   {front: "front", back: "back"}
+  // )
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Practice name={deck.name} cards={deck.cards}/>
     </div>
   );
 }
