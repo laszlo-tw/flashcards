@@ -3,8 +3,6 @@ import { Flashcard, Deck } from "../types";
 // import Header from "./Header";
 // import Card from "./Card";
 
-export {};
-
 const Practice: React.FC<Deck> = ({name, cards}) => {
     // const [side, setSide] = useState<boolean>(true);
     const [index, setIndex] = useState<number>(0);
