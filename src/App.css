@@ -2,6 +2,81 @@ header {
   text-align: center;
 }
 
+/* DECKVIEW PAGE */
+.deck-view-layout {
+  align-items: center;
+}
+
+.deck-table {
+  margin: auto;
+  text-align: center;
+  border-collapse: collapse;
+
+  table-layout: fixed;
+  width: 75%;
+  max-width: 500px;
+}
+
+th, td {
+  padding: 0.25em 1em;
+  border: 0.5px solid;
+  width: 50%;
+  height: 1.5em; /* account for differences in font heights */
+}
+
+table thead {
+  background-color: #D3D3D3;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #D3D3D3;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #E5E4E2;
+}
+
+table tbody td:hover {
+  background-color: #C0C0C0;
+}
+
+.deck-table td input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  resize: none;
+  text-align: inherit;
+}
+
+.deck-table td:has(input:focus) {
+  background-color: #C0C0C0;
+}
+
+.deck-view-layout button {
+  display: block;
+  margin: 1em auto;
+  /* */
+  background-color: #d3d3d3;
+  padding: 0.25em 1em;
+  border: 0.5px solid;
+  font-family: inherit;
+  font-size: inherit;
+  width: 175px;
+  height: 2em;
+}
+
+.deck-view-layout button:hover {
+  background-color: #c0c0c0;
+}
+
+/* PRACTICE PAGE */
+
 .practice {
   /* grow to take up the entire height of the page */
   height: 100vh;
