@@ -7,16 +7,16 @@ export interface Flashcard {
 }
 
 export interface Deck {
-    // id: number;
+    id: number;
     name: string;
     cards: Flashcard[];
     // front-label string e.g. "english"
     // back-label string e.g. "korean"
 }
 
-// export interface Collection {
-//     collection: Deck[];
-// }
+export interface Collection {
+    decks: Deck[];
+}
 
 // Props
 // export interface CardProps {

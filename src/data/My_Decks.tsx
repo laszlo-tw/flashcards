@@ -1,10 +1,11 @@
 // sample data
 
-import {Deck} from '../types'
+import {Deck, Collection} from '../types'
 
 // a function that takes a csv file
 
 let countries_deck : Deck = {
+    id: 1,
     name: "Countries",
     cards: [  
         {id: 1, front: "America", back: "미국"},
@@ -20,6 +21,7 @@ let countries_deck : Deck = {
 }
 
 let occupations_deck : Deck = {
+    id: 2,
     name: "Occupations",
     cards: [  
         {id: 1, front: "student", back: "학생"},
@@ -40,6 +42,7 @@ let occupations_deck : Deck = {
 }
 
 let office_supplies_deck : Deck = {
+    id: 3,
     name: "Office Supplies",
     cards: [  
         {id: 1, front: "book", back: "책"},
@@ -65,10 +68,10 @@ let office_supplies_deck : Deck = {
             ]
 }
 
-// let my_decks : Collection = {
-//     collection: [countries_deck, occupations_deck, office_supplies_deck]
-// }
+let my_decks : Collection = {
+    decks: [countries_deck, occupations_deck, office_supplies_deck]
+}
 
-let my_decks : Deck[] = [countries_deck, occupations_deck, office_supplies_deck];
+// let my_decks : Deck[] = [countries_deck, occupations_deck, office_supplies_deck];
 
 export default my_decks;
